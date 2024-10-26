@@ -1,6 +1,5 @@
-package ru.vital.eventlistenerdemo;
+package dev.vitaliy.eventlistenerdemo.event;
 
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
