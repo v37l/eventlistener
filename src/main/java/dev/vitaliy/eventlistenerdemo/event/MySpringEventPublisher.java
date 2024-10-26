@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class MySpringEventPublisher {
+class MySpringEventPublisher {
 
     private final ApplicationEventPublisher eventPublisher;
 
 
-    public void publishEvent(final String message) {
+    void publishEvent(final String message) {
         System.out.println("publishing my event");
         eventPublisher.publishEvent(new MySpringEvent(this, message));
     }

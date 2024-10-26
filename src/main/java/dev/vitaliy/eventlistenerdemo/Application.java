@@ -1,6 +1,6 @@
 package dev.vitaliy.eventlistenerdemo;
 
-import dev.vitaliy.eventlistenerdemo.event.MySpringEventPublisher;
+import dev.vitaliy.eventlistenerdemo.util.SpELResolver;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -16,7 +16,7 @@ public class Application {
 
 
 	@Bean
-	ApplicationListener<ApplicationReadyEvent> onStartup(MySpringEventPublisher publisher) {
-	    return event -> publisher.publishEvent("this is my custom event");
+	ApplicationListener<ApplicationReadyEvent> onStartup(SpELResolver spelResolver) {
+	    return event -> System.out.println(spelResolver.resolveStringValue("#{defaultMySpringEvent.ezKatka == true}"));
 	}
 }

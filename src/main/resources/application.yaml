@@ -1,1 +1,3 @@
-spring.application.name=eventlistenerdemo
+spring:
+  application:
+    name: eventlistenerdemo

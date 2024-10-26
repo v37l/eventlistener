@@ -4,10 +4,10 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MySpringEventListener  {
+class MySpringEventListener  {
 
     @EventListener
-    public void onApplicationEvent(MySpringEvent event) {
+    void onApplicationEvent(MySpringEvent event) {
         System.out.println("received spring custom event: " + event.getMessage());
     }
 }

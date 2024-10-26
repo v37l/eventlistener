@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 
 @Getter
-public class MySpringEvent extends ApplicationEvent {
+class MySpringEvent extends ApplicationEvent {
 
     private final String message;
 
